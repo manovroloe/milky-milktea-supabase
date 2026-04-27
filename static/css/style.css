@@ -808,43 +808,106 @@ body {
     }
 }
 
+/* =========================
+   MOBILE NAVBAR STACK FIX
+   Keeps full logo
+   Moves Home + Menu + Cart UNDER logo
+   ========================= */
 @media (max-width: 768px) {
+
     .navbar {
-        display: block !important;
-        padding: 0.7rem 0.8rem !important;
+        padding: 0.8rem 1rem !important;
+        background: whitesmoke !important;
+        width: 100% !important;
     }
 
+    /* STACK logo on top, nav below */
     .nav-container {
         display: flex !important;
-        justify-content: space-between !important;
+        flex-direction: column !important;
         align-items: center !important;
-        gap: 8px !important;
+        justify-content: center !important;
+        gap: 0.6rem !important;
+        width: 100% !important;
     }
 
-    .logo span {
-        font-size: 1rem !important;
+    /* Logo stays visible */
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
     }
 
     .logo i {
-        font-size: 1.4rem !important;
+        font-size: 1.8rem !important;
     }
 
+    .logo span {
+        font-size: 1.3rem !important;
+        white-space: nowrap !important;
+    }
+
+    /* Nav row below logo */
     .nav-links {
         display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
         align-items: center !important;
-        gap: 0.5rem !important;
+        gap: 1.2rem !important;
+        width: 100% !important;
+        flex-wrap: nowrap !important;
     }
 
+    /* Home + Menu visible */
     .nav-links a {
         display: inline-block !important;
-        font-size: 0.85rem !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        color: #2e7d32 !important;
+        text-decoration: none !important;
+        white-space: nowrap !important;
     }
 
+    /* Cart visible */
     .cart-icon-nav {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        font-size: 0.95rem !important;
-        padding: 7px !important;
+        width: 38px !important;
+        height: 38px !important;
+        padding: 0 !important;
+        font-size: 1rem !important;
+    }
+
+    .cart-count-nav {
+        font-size: 0.7rem !important;
+        padding: 2px 5px !important;
+    }
+
+    /* Hero spacing so navbar doesn't overlap */
+    .hero {
+        padding-top: 110px !important;
+    }
+
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+
+    .hero-buttons {
+        flex-direction: column !important;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cart-sidebar {
+        width: 100% !important;
+    }
+
+    .carousel-arrow {
+        display: none !important;
     }
 }
