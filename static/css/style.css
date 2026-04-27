@@ -812,19 +812,52 @@ body {
     .products-grid {
         grid-template-columns: 1fr;
     }
+
     .cart-sidebar {
         width: 100%;
     }
+
     .hero h1 {
         font-size: 2rem;
     }
+
     .hero-buttons {
         flex-direction: column;
     }
+
+    /* Keep cart visible on mobile */
     .nav-links {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    /* Hide Home/Menu text links only */
+    .nav-links a {
         display: none;
     }
+
+    /* Keep cart icon */
+    .cart-icon-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .carousel-arrow {
         display: none;
+    }
+
+    /* Optional logo resize for mobile */
+    .logo span {
+        font-size: 1.4rem;
+    }
+
+    .logo i {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        padding: 1rem;
     }
 }
