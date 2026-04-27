@@ -834,7 +834,7 @@ body {
     }
 
     .logo i {
-        font-size: 1rem !important;
+        font-size: 2rem !important;
     }
 
     .logo span {
@@ -843,15 +843,15 @@ body {
         white-space: nowrap !important;
     }
 
-    .nav-links {
-        flex-direction: column;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 22px !important;
-        width: 100% !important;
-        flex-wrap: wrap !important;
-    }
+   .nav-links {
+    display: flex !important;
+    flex-direction: row !important;   /* FIXED */
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;             /* smaller spacing */
+    width: 100% !important;
+    flex-wrap: wrap !important;
+   }
     .nav-links a,
     .cart-btn {
     padding: 8px 12px;
@@ -881,7 +881,7 @@ body {
     }
 
     .hero {
-        padding-top: 125px !important;
+    padding-top: 170px !important;
     }
 
     .hero h1 {
