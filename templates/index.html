@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milky Milktea - Premium Bubble Tea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Milky Milktea</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <div class="cart-icon-nav" id="cartIconNav">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count-nav" id="cartCountNav">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-slide" style="background-image: url('https://static.vecteezy.com/system/resources/previews/047/063/274/large_2x/colorful-bubble-tea-drinks-with-tapioca-pearls-and-ice-in-plastic-cups-free-photo.jpeg');"></div>
+            <div class="carousel-slide" style="background-image: url('https://static.vecteezy.com/system/resources/previews/040/562/259/large_2x/ai-generated-refreshing-summer-cocktail-with-citrus-fruit-and-mint-leaf-garnish-generated-by-ai-free-photo.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('https://static.vecteezy.com/system/resources/previews/046/874/177/large_2x/colorful-bubble-tea-drinks-with-boba-pearls-on-a-black-countertop-free-photo.jpeg');"></div>
+            <div class="carousel-slide" style="background-image: url('https://img.freepik.com/premium-photo/iced-coffee-with-flavored-syrups-tall-glass_98908-2307.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('https://img.freepik.com/premium-photo/background-with-milkshakes-table_763713-5632.jpg');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="carousel-arrow arrow-left" id="prevSlide">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="carousel-arrow arrow-right" id="nextSlide">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        
+        <div class="carousel-dots" id="carouselDots"></div>
+        
+        <div class="hero-content">
+            <h1>Milky Milktea</h1>
+            <p>Milk tea for moments of peace. A gentle escape where worries cease.</p>
+            <div class="hero-buttons">
+                <button class="btn-outline" id="orderNowHeroBtn">Order Now</button>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <div class="section-header">
+            <h2>Our Menu</h2>
+            <p>Discover our carefully crafted beverages made with premium ingredients</p>
+        </div>
+        <div class="category-tabs" id="categoryTabs">
+            <button class="category-tab active" data-category="all">All</button>
+            <button class="category-tab" data-category="Milk Tea">Milk Tea</button>
+            <button class="category-tab" data-category="Milkshake">Milkshake</button>
+            <button class="category-tab" data-category="Tea">Iced Tea</button>
+            <button class="category-tab" data-category="Iced Coffee">Iced Coffee</button>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Milky Milktea. All rights reserved. | Moments of Peace Brew</p>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Order</h3>
+            <i class="fas fa-times" id="closeCart" style="cursor: pointer; font-size: 1.5rem;"></i>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">PHP 0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+            <button class="clear-btn" id="clearCartBtn">Clear Cart</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="receiptModal">
+        <div class="receipt-modal">
+            <div class="receipt-header">
+                <i class="fas fa-check-circle"></i>
+                <h2>Order Confirmed!</h2>
+                <p>Thank you for your order</p>
+            </div>
+            <div class="receipt-body" id="receiptContent"></div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="paymentModal">
+        <div class="receipt-modal">
+            <div class="receipt-header">
+                <i class="fas fa-credit-card"></i>
+                <h2>Select Payment Method</h2>
+                <p>Choose how you want to pay</p>
+            </div>
+            <div class="receipt-body">
+                <div class="payment-options" id="paymentOptions">
+                    <div class="payment-option" data-method="Cash">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Cash</span>
+                    </div>
+                    <div class="payment-option" data-method="Credit Card">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>Credit Card</span>
+                    </div>
+                    <div class="payment-option" data-method="Debit Card">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Debit Card</span>
+                    </div>
+                    <div class="payment-option" data-method="E-Wallet">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>E-Wallet</span>
+                    </div>
+                </div>
+                <button class="confirm-payment-btn" id="confirmPaymentBtn">Confirm Payment</button>
+                <button class="cancel-payment-btn" id="cancelPaymentBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
