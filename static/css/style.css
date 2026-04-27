@@ -885,6 +885,8 @@ body {
         font-size: 18px !important;
         color: #2e7d32 !important;
         position: relative !important;
+        text-decoration: none !important;
+        gap: 6px !important;
     }
 
     .cart-count-nav {
