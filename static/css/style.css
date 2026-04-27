@@ -808,76 +808,70 @@ body {
     }
 }
 
-/* =========================
-   MOBILE NAVBAR STACK FIX
-   Keeps full logo
-   Moves Home + Menu + Cart UNDER logo
-   ========================= */
 @media (max-width: 768px) {
-
     .navbar {
-        padding: 0.8rem 1rem !important;
+        padding: 10px 12px !important;
         background: whitesmoke !important;
         width: 100% !important;
     }
 
-    /* STACK logo on top, nav below */
     .nav-container {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 0.6rem !important;
+        gap: 8px !important;
         width: 100% !important;
+        max-width: 100% !important;
     }
 
-    /* Logo stays visible */
     .logo {
         display: flex !important;
-        align-items: center !important;
         justify-content: center !important;
+        align-items: center !important;
         gap: 8px !important;
         width: 100% !important;
     }
 
     .logo i {
-        font-size: 1.8rem !important;
+        font-size: 1rem !important;
     }
 
     .logo span {
+        display: inline-block !important;
         font-size: 1.3rem !important;
         white-space: nowrap !important;
     }
 
-    /* Nav row below logo */
     .nav-links {
+        flex-direction: column;
         display: flex !important;
-        flex-direction: row !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 1.2rem !important;
+        gap: 22px !important;
         width: 100% !important;
-        flex-wrap: nowrap !important;
+        flex-wrap: wrap !important;
     }
-
-    /* Home + Menu visible */
+    .nav-links a,
+    .cart-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    }
     .nav-links a {
         display: inline-block !important;
         font-size: 1rem !important;
         font-weight: 700 !important;
         color: #2e7d32 !important;
         text-decoration: none !important;
-        white-space: nowrap !important;
     }
 
-    /* Cart visible */
     .cart-icon-nav {
         display: flex !important;
+        width: 36px !important;
+        height: 36px !important;
+        padding: 0 !important;
         align-items: center !important;
         justify-content: center !important;
-        width: 38px !important;
-        height: 38px !important;
-        padding: 0 !important;
         font-size: 1rem !important;
     }
 
@@ -886,9 +880,8 @@ body {
         padding: 2px 5px !important;
     }
 
-    /* Hero spacing so navbar doesn't overlap */
     .hero {
-        padding-top: 110px !important;
+        padding-top: 125px !important;
     }
 
     .hero h1 {
